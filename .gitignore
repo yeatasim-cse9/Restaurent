@@ -51,3 +51,6 @@ firebase_options.dart
 .env
 commit_history.ps1
 .metadata
+
+# Media
+*.mp4
