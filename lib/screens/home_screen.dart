@@ -9,6 +9,11 @@ import '../providers/favorites_provider.dart';
 import '../models/recipe_model.dart';
 import '../services/firebase_service.dart';
 import 'recipe_detail_screen.dart';
+import 'profile_features/order_history_screen.dart';
+import 'profile_features/manage_addresses_screen.dart';
+import 'profile_features/payment_methods_screen.dart';
+import 'profile_features/notifications_settings_screen.dart';
+import 'profile_features/security_privacy_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -2199,11 +2204,21 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                _buildProfileItem(Icons.history_rounded, 'Order History', () {}),
-                _buildProfileItem(Icons.location_on_outlined, 'Manage Addresses', () {}),
-                _buildProfileItem(Icons.payment_rounded, 'Payment Methods', () {}),
-                _buildProfileItem(Icons.notifications_active_outlined, 'Notifications Settings', () {}),
-                _buildProfileItem(Icons.security_rounded, 'Security & Privacy', () {}),
+                _buildProfileItem(Icons.history_rounded, 'Order History', () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const OrderHistoryScreen()));
+                }),
+                _buildProfileItem(Icons.location_on_outlined, 'Manage Addresses', () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ManageAddressesScreen()));
+                }),
+                _buildProfileItem(Icons.payment_rounded, 'Payment Methods', () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const PaymentMethodsScreen()));
+                }),
+                _buildProfileItem(Icons.notifications_active_outlined, 'Notifications Settings', () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const NotificationsSettingsScreen()));
+                }),
+                _buildProfileItem(Icons.security_rounded, 'Security & Privacy', () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const SecurityPrivacyScreen()));
+                }),
                 
                 const SizedBox(height: 32),
 
