@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+/// Screen for managing user notification preferences.
+///
+/// Allows the user to toggle settings for:
+/// - Order updates
+/// - Promotions & offers
+/// - New restaurants alerts
+/// - Weekly email newsletters
 class NotificationsSettingsScreen extends StatefulWidget {
   const NotificationsSettingsScreen({super.key});
 

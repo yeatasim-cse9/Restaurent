@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// Screen for displaying and managing user payment methods.
+///
+/// This screen lists the user's saved credit/debit cards in a 
+/// stylized card format (e.g., Visa, Mastercard) and provides a 
+/// floating action button to add new payment methods.
 class PaymentMethodsScreen extends StatelessWidget {
   const PaymentMethodsScreen({super.key});
 

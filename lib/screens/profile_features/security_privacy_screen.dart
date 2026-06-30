@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+/// Screen for managing user security and privacy settings.
+/// 
+/// This screen allows users to:
+/// - Change their password
+/// - Toggle Two-Factor Authentication
+/// - Adjust Data Sharing Settings
+/// - View the Privacy Policy
+/// - Delete their account
 class SecurityPrivacyScreen extends StatelessWidget {
   const SecurityPrivacyScreen({super.key});
 
